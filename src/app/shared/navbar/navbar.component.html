@@ -9,7 +9,7 @@
         <input matInput type="search" placeholder="Search">
       </mat-form-field>
       <button mat-mini-fab class="search-btn"><i class="material-icons" style="font-size:18px;">search</i></button>
-      <button mat-icon-button><i class="material-icons icon-btn">dashboard</i></button>
+      <button mat-icon-button><a routerLink="/dashboard"><i class="material-icons icon-btn">dashboard</i></a></button>
       <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="menu"></app-msgiconbtn>
       <button mat-icon-button><i class="material-icons icon-btn" [matMenuTriggerFor]="personData">person</i></button>
       <mat-menu #menu="matMenu">
@@ -21,16 +21,22 @@
       </mat-menu>
       <mat-menu #personData="matMenu">
         <button mat-menu-item>
-          <i class="material-icons icon-btn">person</i>
-          <span class="mat-icon-text">Profile</span>
+          <a routerLink="/dashboard/profile">
+            <i class="material-icons icon-btn">person</i>
+            <span class="mat-icon-text">Profile</span>
+          </a>
         </button>
         <button mat-menu-item>
-          <i class="material-icons icon-btn">settings</i>
-          <span class="mat-icon-text">Settings</span>
+          <a routerLink="/dashboard/settings">
+            <i class="material-icons icon-btn">settings</i>
+            <span class="mat-icon-text">Settings</span>
+          </a>
         </button>
         <button mat-menu-item>
-          <i class="material-icons icon-btn">logout</i>
-          <span class="mat-icon-text">Logout</span>
+          <a routerLink="/">
+            <i class="material-icons icon-btn">logout</i>
+            <span class="mat-icon-text">Logout</span>
+          </a>
         </button>
       </mat-menu>
     </div>
