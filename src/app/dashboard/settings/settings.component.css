@@ -1,82 +1,57 @@
-.sidebar-btn{
-  background-color: transparent;
-  border: none;
-  outline: none;
+.card{
+  padding: 20px 20px 15px 20px;
 }
 
-.sidebar-img{
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-  cursor: pointer;
-  -webkit-transition: all 400ms;
-  -moz-transition: all 400ms;
-  -ms-transition: all 400ms;
-  -o-transition: all 400ms;
-  transition: all 400ms;
-  border: 4px solid transparent;
+.card small{
+  font-weight: 300;
 }
 
-.btn-hover:hover{
-  border-color: rgba(0, 187, 255, 0.5);
-  -webkit-transition: all 400ms;
-  -moz-transition: all 400ms;
-  -ms-transition: all 400ms;
-  -o-transition: all 400ms;
-  transition: all 400ms;
+.h-tab{
+  margin-top: 35px;
 }
 
-.active{
-  border-color: #00bbff;
+.tab-content{
+  display: none;
 }
 
-.dot-row{
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 40px 0;
+.h-tab .tab-link.active{
+  background-color: #ff9800 !important;
+  color: #FFF !important;
+  box-shadow: 0 14px 26px -12px rgba(255, 152, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2) !important;
 }
 
-.dot{
-  border: 3px solid transparent;
-  border-radius: 50%;
-  width: 23px;
-  height: 23px;
-  margin: 0 10px;
-  cursor: pointer;
+.v-tab .tab-link.active{
+  background-color: #00bcd4 !important;
+  color: #FFF !important;
+  box-shadow: 0 14px 26px -12px rgba(0, 188, 212, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2) !important;
 }
 
-.purple{
-  background-color: #9c27b0;
+.v-tab .tab-link{
+  margin-bottom: 10px;
 }
 
-.blue{
-  background-color: #00bcd4;
+.h-tab .tab-link, .v-tab .tab-link{
+  box-shadow: none !important;
+  background-color: transparent !important;
+  color: #555 !important;
 }
 
-.dodgerblue{
-  background-color: dodgerblue;
+.h-tab .tab-link:hover, .v-tab .tab-link:hover{
+  background-color: rgba(200, 200, 200, 0.2) !important;
 }
 
-.green{
-  background-color: #4caf50;
+.h-tab .tab-link.active:hover{
+  background-color: #ff9800 !important;
 }
 
-.orange{
-  background-color: #ff9800;
+.v-tab .tab-link.active:hover{
+  background-color: #00bcd4 !important;
 }
 
-.red{
-  background-color: #f44336;
+.h-tab .tab-content{
+  padding-top: 20px;
 }
 
-.white{
-  background-color: rgba(200, 200, 200, 0.2);
-}
-
-.rose{
-  background-color: #e91e63;
-}
-
-.black{
-  background-color: #000;
+.mat-radio-button {
+  margin-right: 15px;
 }

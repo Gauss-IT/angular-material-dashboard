@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { SettingsService } from '../../services/settings.service';
 
 @Component({
@@ -6,30 +6,43 @@ import { SettingsService } from '../../services/settings.service';
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css']
 })
-export class SettingsComponent implements OnInit {
-
-  constructor(public settingService: SettingsService) { }
+export class SettingsComponent implements OnInit, AfterViewInit {
+  constructor() {
+  }
 
   ngOnInit() {
-    const defaultId = this.settingService.getSidebarImageIndex();
-    const sidebarImgs: HTMLCollection = document.getElementsByClassName('sidebar-img');
-    sidebarImgs[defaultId].className = sidebarImgs[defaultId].className + ' active';
   }
-
-  bgChooseClick(id) {
-    this.settingService.setSidebarImageIndex(id);
-    const sidebarImgs: HTMLCollection = document.getElementsByClassName('sidebar-img');
-    for (let i = 0; i < sidebarImgs.length; i++) {
-      sidebarImgs[i].className = sidebarImgs[i].className.replace(' active', '');
+  ngAfterViewInit() {
+    const activeTabs = document.getElementsByClassName('default-active');
+    for (let i = 0; i < activeTabs.length; i++) {
+      (<HTMLElement>activeTabs[i]).click();
     }
-    sidebarImgs[id].className = sidebarImgs[id].className + ' active';
   }
 
-  filterChooseClick(color) {
-    this.settingService.setSidebarFilter(color);
+  tabClick(evt, id) {
+    const tabcontents = document.querySelectorAll('.h-tab .tab-content');
+    for (let i = 0; i < tabcontents.length; i++) {
+      (<HTMLElement>tabcontents[i]).style.display = 'none';
+    }
+    const tablinks = document.querySelectorAll('.h-tab .tab-link');
+    for (let i = 0; i < tablinks.length; i++) {
+      const tablink = <HTMLElement>tablinks[i];
+      tablink.className = tablink.className.replace(' active', '');
+    }
+    document.getElementById(id).style.display = 'block';
+    evt.currentTarget.className += ' active';
   }
-
-  bgColorChooseClick(color) {
-    this.settingService.setSidebarColor(color);
+  vTabClick(evt, id) {
+    const tabcontents = document.querySelectorAll('.v-tab .tab-content');
+    for (let i = 0; i < tabcontents.length; i++) {
+      (<HTMLElement>tabcontents[i]).style.display = 'none';
+    }
+    const tablinks = document.querySelectorAll('.v-tab .tab-link');
+    for (let i = 0; i < tablinks.length; i++) {
+      const tablink = <HTMLElement>tablinks[i];
+      tablink.className = tablink.className.replace(' active', '');
+    }
+    document.getElementById(id).style.display = 'block';
+    evt.currentTarget.className += ' active';
   }
 }
