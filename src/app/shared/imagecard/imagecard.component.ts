@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ImagecardComponent implements OnInit {
   @Input() title: string;
-  @Input() desc: string;
+  //@Input() desc: string;
   @Input() footerTitle: string;
   @Input() position: string;
   @Input() image: string;
