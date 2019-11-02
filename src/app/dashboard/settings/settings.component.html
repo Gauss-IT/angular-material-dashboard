@@ -11,11 +11,11 @@
             (click)="tabClick($event, 'options')">OPTIONS</button>
         </div>
         <div id="profile" class="tab-content">
-          Application settings below.
+          Personal settings below.
           <br /><br />
           <mat-form-field color="accent">
-              <input matInput type="text" placeholder="Email" [(ngModel)]="eMail" value="Ci" name="eMail">
-            </mat-form-field>
+            <input matInput type="text" placeholder="Email" [(ngModel)]="eMail" value="Ci" name="eMail">
+          </mat-form-field>
           <br /><br />
           <mat-checkbox>Send email when editing</mat-checkbox>
           <br /><br />
@@ -23,23 +23,31 @@
           <br /><br />
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button value="1">Credit card</mat-radio-button>
-            <mat-radio-button value="2">Debit card  </mat-radio-button>
-            <mat-radio-button value="3">PayPal  </mat-radio-button>
+            <mat-radio-button value="2">Debit card </mat-radio-button>
+            <mat-radio-button value="3">PayPal </mat-radio-button>
 
-          </mat-radio-group> 
+          </mat-radio-group>
+          
+          <div class="row action-btn">
+            <button md-raised-button type="submit" class="btn btn-blue">Update settings</button>
+          </div>
+        </div>
+        <div id="options" class="tab-content">
+          Application settings below.
+          <br /><br />
+          <mat-form-field color="accent">
+            <input matInput type="text" placeholder="Username" [(ngModel)]="username" value="Ci" name="username">
+          </mat-form-field>
+          <br /><br />
+          <mat-checkbox>Show prices with VAT included</mat-checkbox>
           <br /><br />
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button value="1">Light mode </mat-radio-button>
-            <mat-radio-button value="2">Dark mode  </mat-radio-button>
-          </mat-radio-group>    
+            <mat-radio-button value="2">Dark mode </mat-radio-button>
+          </mat-radio-group>
           <div class="row action-btn">
-              <button md-raised-button type="submit" class="btn btn-blue">Update settings</button>
-            </div>      
-        </div>
-        <div id="options" class="tab-content">
-          Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate
-          one-to-one customer service with robust ideas.<br /><br />
-          Dynamically innovate resource-leveling customer service for state of the art customer service.
+            <button md-raised-button type="submit" class="btn btn-blue">Update settings</button>
+          </div>
         </div>
       </div>
     </div>

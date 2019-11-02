@@ -9,12 +9,11 @@ import { SettingsService } from '../../services/settings.service';
 
 export class SettingsComponent implements OnInit, AfterViewInit {
   eMail: string;
-  
+  username: string;
   constructor() {
   }
 
   ngOnInit() {
-    this.eMail = 'companyEmail@email.com';
   }
   ngAfterViewInit() {
     const activeTabs = document.getElementsByClassName('default-active');
