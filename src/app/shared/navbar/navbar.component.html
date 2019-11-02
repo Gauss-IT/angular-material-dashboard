@@ -11,13 +11,18 @@
       <button mat-mini-fab class="search-btn"><i class="material-icons" style="font-size:18px;">search</i></button>
       <button mat-icon-button><i class="material-icons icon-btn">dashboard</i></button>
       <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="menu"></app-msgiconbtn>
-      <button mat-icon-button><i class="material-icons icon-btn">person</i></button>
+      <button mat-icon-button><i class="material-icons icon-btn" [matMenuTriggerFor]="personData">person</i></button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Mike John responded to your email</button>
-        <button mat-menu-item>You have 5 new tasks</button>
-        <button mat-menu-item>You're now friend with Andrew</button>
-        <button mat-menu-item>Another Notification</button>
-        <button mat-menu-item>Another One</button>
+        <button mat-menu-item>Mike John responded payed the accomodation</button>
+        <button mat-menu-item>You have 5 new bookings</button>
+        <button mat-menu-item>You need to confirm 5 invoices</button>
+        <button mat-menu-item>New booking request</button>
+        <button mat-menu-item>Last payment is processed</button>
+      </mat-menu>
+      <mat-menu #personData="matMenu">
+        <button mat-menu-item><i class="material-icons icon-btn">person</i><span class="mat-icon-text">Profile</span></button>
+        <button mat-menu-item><i class="material-icons icon-btn">settings</i><span class="mat-icon-text">Settings</span></button>
+        <button mat-menu-item><i class="material-icons icon-btn">logout</i><span class="mat-icon-text">Logout</span></button>
       </mat-menu>
     </div>
     <div id="menu">

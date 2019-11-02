@@ -256,9 +256,9 @@ b{
 }
 
 .mat-menu-content .mat-menu-item:hover{
-  background-color: #9c27b0 !important;
+  background-color: rgb(101, 189, 230) !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4) !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(37, 131, 175, 0.4) !important;
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
   -ms-transition: all 400ms;
