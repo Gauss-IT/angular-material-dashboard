@@ -1,7 +1,7 @@
 .image-card{
   position: relative;
   width: 100%;
-  min-height: 275px;
+  min-height: 250px;
   margin: 25px 0;
   padding: 15px;
 }
@@ -17,7 +17,7 @@
 
 .header img{
   position: relative;
-  max-width: 100%;
+  width: 100%;
   border-radius: 6px;
 }
 
