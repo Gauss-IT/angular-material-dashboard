@@ -2,42 +2,39 @@
   <app-navbar title="Settings"></app-navbar>
   <div class="row page-title">
     <div class="card">
-      <h4>Navigation Pills - <small>Horizontal Tabs</small></h4>
+      <h4>Settings - <small>Menu</small></h4>
       <div class="h-tab">
         <div class="tab">
           <button mat-raised-button class="btn btn-warning btn-round tab-link default-active"
             (click)="tabClick($event, 'profile')">PROFILE</button>
           <button mat-raised-button class="btn btn-warning btn-round tab-link"
-            (click)="tabClick($event, 'settings')">SETTINGS</button>
-          <button mat-raised-button class="btn btn-warning btn-round tab-link"
             (click)="tabClick($event, 'options')">OPTIONS</button>
         </div>
         <div id="profile" class="tab-content">
-          Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C
-          users after installed base benefits.<br /><br />
-          Dramatically visualize customer directed convergence without revolutionary ROI. Collaboratively administrate
-          empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base
-          benefits.<br /><br />
-          This is very nice.
+          Application settings below.
           <br /><br />
-          <mat-checkbox>Check me!</mat-checkbox>
+          <mat-form-field color="accent">
+              <input matInput type="text" placeholder="Email" [(ngModel)]="eMail" value="Ci" name="eMail">
+            </mat-form-field>
           <br /><br />
-          <mat-checkbox>Check me!</mat-checkbox>
+          <mat-checkbox>Send email when editing</mat-checkbox>
+          <br /><br />
+          <mat-checkbox>Notifications</mat-checkbox>
           <br /><br />
           <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Option 1  </mat-radio-button>
-            <mat-radio-button value="2">Option 2  </mat-radio-button>
+            <mat-radio-button value="1">Credit card</mat-radio-button>
+            <mat-radio-button value="2">Debit card  </mat-radio-button>
+            <mat-radio-button value="3">PayPal  </mat-radio-button>
+
           </mat-radio-group> 
           <br /><br />
           <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Option 1  </mat-radio-button>
-            <mat-radio-button value="2">Option 2  </mat-radio-button>
-          </mat-radio-group>          
-        </div>
-        <div id="settings" class="tab-content">
-          Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables
-          for real-time schemas.<br /><br />
-          Dramatically maintain clicks-and-mortar solutions without functional solutions.
+            <mat-radio-button value="1">Light mode </mat-radio-button>
+            <mat-radio-button value="2">Dark mode  </mat-radio-button>
+          </mat-radio-group>    
+          <div class="row action-btn">
+              <button md-raised-button type="submit" class="btn btn-blue">Update settings</button>
+            </div>      
         </div>
         <div id="options" class="tab-content">
           Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate

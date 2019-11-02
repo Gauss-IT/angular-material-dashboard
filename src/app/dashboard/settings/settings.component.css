@@ -55,3 +55,13 @@
 .mat-radio-button {
   margin-right: 15px;
 }
+
+.action-btn{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.row{
+  margin-top: 15px;
+}
